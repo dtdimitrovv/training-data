@@ -2,15 +2,15 @@ package com.example.trainingdata;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class TrainingDataApplication
-{
+@ComponentScan("com.example")
+public class TrainingDataApplication {
 
-    public static void main( String[] args )
-    {
-        SpringApplication.run( TrainingDataApplication.class,
-                               args );
+    public static void main(String[] args) {
+        SpringApplication.run(TrainingDataApplication.class,
+                args);
     }
 
 }

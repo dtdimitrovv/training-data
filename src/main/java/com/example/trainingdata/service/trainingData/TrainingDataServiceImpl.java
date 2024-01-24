@@ -1,4 +1,4 @@
-package com.example.trainingdata.service;
+package com.example.trainingdata.service.trainingData;
 
 import com.example.trainingdata.entity.Trainer;
 import com.example.trainingdata.entity.TrainingDatum;
