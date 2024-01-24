@@ -1,11 +1,13 @@
 package com.example.trainingdata.entity;
 
-import jakarta.persistence.*;
+import com.example.authorizationValidator.entity.WithPrimaryKeyBaseEntity;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "training_data")
-public class TrainingDatum  {
-    private Long id;
+public class TrainingDatum extends WithPrimaryKeyBaseEntity {
     private String conditionBeforeTraining;
     private String conditionAfterTraining;
     private String conditionDuringTraining;
@@ -30,17 +32,6 @@ public class TrainingDatum  {
         this.exercisesPerformed = exercisesPerformed;
         this.trainer = trainer;
         this.trainee = trainee;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long getId() {
-        return id;
-    }
-
-    public TrainingDatum setId(Long id) {
-        this.id = id;
-        return this;
     }
 
     public String getConditionBeforeTraining() {
